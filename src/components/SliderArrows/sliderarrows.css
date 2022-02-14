@@ -1,0 +1,30 @@
+.slider__arrows {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+}
+
+
+.slider__arrow {
+    position: absolute;
+    padding: .8em 1em;
+    background-color: #eee;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider__arrow--previous {
+    left: 1.2em;
+}
+
+.slider__arrow--previous > svg {
+    transform: translate(1px, 2px);
+}
+
+.slider__arrow--next {
+    right: 1.2em;
+}
+
+.slider__arrow--next > svg {
+    transform: translate(3px, 2px);
+}

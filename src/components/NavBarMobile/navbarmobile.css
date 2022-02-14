@@ -1,0 +1,17 @@
+.navbar-mobile {
+    width: 65%;
+    height: 100vh;
+    transition: transform .5s;
+    transform: translateX(-100%);
+    padding: 1em;
+    background-color: white;
+}
+
+.navbar-mobile.in.transition {
+    transform: translateX(0);
+}
+
+.navbar-mobile__button {
+    display: flex;
+    padding: 1em;
+}

@@ -1,0 +1,19 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
+
+@media (min-width: 1110px) {
+    .slider {
+        gap: 1.8em;
+    }
+}
