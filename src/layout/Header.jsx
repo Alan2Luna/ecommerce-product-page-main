@@ -38,9 +38,7 @@ export const Header = () => {
 
             <div className="header__right-side">
 
-                <button className="header__cart-container">
-                    <IconCart width={ 22 } height={ 22 } />
-                </button>
+                <Cart />
 
                 <img className="header__avatar" src={ Avatar } alt="" />
                 

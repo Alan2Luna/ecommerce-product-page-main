@@ -17,11 +17,6 @@
     gap: 1em;
 }
 
-.header__cart-container {
-    display: flex;
-    cursor: pointer;
-}
-
 .header__avatar {
     width: 25px;
 }

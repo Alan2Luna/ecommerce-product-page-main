@@ -5,10 +5,10 @@ import './productamount.css';
 
 export const ProductAmount = () => {
 
-    const [ amount, setAmount ] = useState(0);
+    const [ amount, setAmount ] = useState(1);
 
     const increaseBy = ( number ) => {
-        setAmount( prev => Math.max(0, prev + number) );
+        setAmount( prev => Math.max(1, prev + number) );
     }
     console.log( amount )
     return (
