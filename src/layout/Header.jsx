@@ -9,8 +9,6 @@ import Logo from '../images/logo.svg';
 import Avatar from '../images/image-avatar.png';
 import IconMenu from '../images/icon-menu.svg';
 
-import { IconCart } from '../components/icons/IconCart';
-
 import './header.css';
 
 export const Header = () => {

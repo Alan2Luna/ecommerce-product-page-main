@@ -8,11 +8,11 @@ export const SliderThumbnail = ({ activeIndex, sliderData, handleThumbnail }) =>
 
             {
 
-                sliderData.map( (slider, index) => (
+                sliderData.map( (thumbnail, index) => (
 
                     <div key={ index } className="slider__thumbnail">
 
-                        <img src={ slider.thumbnail } />
+                        <img src={ thumbnail } />
 
                         <button 
                             onClick={ () => handleThumbnail(index) } 

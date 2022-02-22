@@ -1,0 +1,11 @@
+.cart__empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+}
+
+.cart__empty > p {
+    color: var(--dark-grayish-blue);
+    font-weight: bold;
+}

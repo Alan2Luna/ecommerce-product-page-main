@@ -1,15 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { SliderContent } from '../SliderContent';
 import { SliderArrows } from "../SliderArrows"
 import { SliderThumbnail } from '../SliderThumbnail';
-import { sliderData } from "../../helpers/sliderData";
 import './slider.css';
 
-const len = sliderData.length - 1; 
-
-export const Slider = () => {
+export const Slider = ({ images, thumbnails }) => {
 
     const [ activeIndex, setActiveIndex ] = useState(0);
+    const len = images.length - 1;
 
     const handlePrev = () => ( setActiveIndex( activeIndex < 1 ? len : activeIndex - 1 ));
     const handleNext = () => ( setActiveIndex( activeIndex === len ? 0 : activeIndex + 1 ));
@@ -19,7 +17,7 @@ export const Slider = () => {
 
     return(
         <div className="slider">
-            <SliderContent activeIndex={ activeIndex } sliderData={ sliderData }>
+            <SliderContent activeIndex={ activeIndex } sliderData={ images }>
                 <SliderArrows 
                     prevSlide={ handlePrev }
                     nextSlide={ handleNext }
@@ -27,7 +25,7 @@ export const Slider = () => {
             </SliderContent>
             <SliderThumbnail 
                 activeIndex={ activeIndex }
-                sliderData={ sliderData }
+                sliderData={ thumbnails }
                 handleThumbnail={ handleThumbnail } 
             />
         </div>
