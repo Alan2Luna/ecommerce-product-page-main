@@ -3,14 +3,14 @@ import { useSelector } from 'react-redux';
 import { EmptyCart } from '../EmptyCart';
 import { ProductItemCart } from '../ProductItemCart';
 
+import { getNumProducts } from '../../redux/slices/cartSlice'
 import { IconCart } from '../icons/IconCart';
 import './cart.css';
 
 export const Cart = () => {
 
     const [ cartOpen, setCartOpen ] = useState(false);
-    const productAmount = useSelector( ( state ) => state.cart.amout );
-    console.log(productAmount);
+    const productAmount = useSelector( getNumProducts );
 
     return (
         <>

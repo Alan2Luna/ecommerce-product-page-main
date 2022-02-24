@@ -1,22 +1,17 @@
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
 import { ProductAmount } from '../ProductAmount';
-import { useDispatch } from 'react-redux';
 import { addProductToCart } from '../../redux/slices/cartSlice';
 
 import { IconCart } from '../icons/IconCart';
 import './productdetail.css';
 
-export const ProductDetail = ({ productData }) => {
+export const ProductDetail = () => {
 
     const [ amount, setAmount ] = useState(1);
-    const { 
-        productName, 
-        companyName, 
-        productDescription, 
-        discountRate, 
-        price 
-    } = productData;
-
+    const { '1' : product} = useSelector( state => state.products.products);
+    const { id, companyName, productName, productDescription, price, discountRate } = product;
     const dispatch = useDispatch();
 
     const increaseBy = ( number ) => {
@@ -50,7 +45,7 @@ export const ProductDetail = ({ productData }) => {
 
             <div className="product-info__action-container">
                 <ProductAmount amount={ amount } increaseBy={ increaseBy } />
-                <button onClick={ () => dispatch( addProductToCart(amount) ) } className="product-info__button">
+                <button onClick={ () => dispatch( addProductToCart({ id, amount }) ) } className="product-info__button">
                     <IconCart fill={"#eee"}/>
                     Add to cart
                 </button>

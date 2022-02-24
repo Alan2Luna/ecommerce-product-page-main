@@ -1,16 +1,14 @@
-import './productInfo.css';
 import { ProductDetail } from '../../components/ProductDetail';
 import { Slider } from '../../components/Slider';
+import './productInfo.css';
 
-export const ProductInfo = ({ productData }) => {
+export const ProductInfo = () => {
     
-    const { images, thumbnails } = productData;
-
     return(
         <div className="product-info">
             
-            <Slider images={ images} thumbnails={ thumbnails } />
-            <ProductDetail productData={ productData } />
+            <Slider />
+            <ProductDetail />
 
         </div>
     )

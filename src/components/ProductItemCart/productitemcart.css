@@ -45,6 +45,7 @@
 
 .cart__delete {
     margin: 1em 0 1em 1em;
+    cursor: pointer;
 }
 
 .cart__button {
