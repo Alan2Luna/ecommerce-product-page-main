@@ -28,3 +28,9 @@
 .slider__arrow--next > svg {
     transform: translate(3px, 2px);
 }
+
+@media (min-width: 800px) {
+    .slider__arrow {
+        display: none;
+    }
+}

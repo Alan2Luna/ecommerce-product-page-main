@@ -12,6 +12,12 @@
     display: none;
 }
 
+/*@media (min-width: 800px) {
+    .slider {
+        margin: auto;
+    }
+}*/
+
 @media (min-width: 1110px) {
     .slider {
         gap: 1.8em;

@@ -5,9 +5,11 @@ import { SliderContent } from '../SliderContent';
 import { SliderArrows } from "../SliderArrows"
 import { SliderThumbnail } from '../SliderThumbnail';
 
+/* Porvando */
+
 import './slider.css';
 
-export const Slider = () => {
+export const Slider = ({ handleOpenModal }) => {
 
     const [ activeIndex, setActiveIndex ] = useState(0);
 
@@ -27,7 +29,7 @@ export const Slider = () => {
 
     return(
         <div className="slider">
-            <SliderContent activeIndex={ activeIndex } sliderData={ images }>
+            <SliderContent activeIndex={ activeIndex } sliderData={ images } handleOpenModal={ handleOpenModal }>
                 <SliderArrows 
                     prevSlide={ handlePrev }
                     nextSlide={ handleNext }

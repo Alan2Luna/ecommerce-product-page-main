@@ -5,6 +5,7 @@
 @media (min-width: 800px) { 
     .slider__thumbnails {
         display: flex;
+        justify-content: space-between;
         gap: 1em;
     }
 

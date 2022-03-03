@@ -15,6 +15,15 @@
 }
 
 @media (min-width: 800px) {
+    .slide__content {
+        border-radius: 1.4em;
+        cursor: pointer;
+    }
+
+    .slide__content.activeArrows > .slider__arrows > .slider__arrow {
+        display: initial;
+    }
+
     .slide {
         border-radius: 1.4em;
         overflow: hidden;
